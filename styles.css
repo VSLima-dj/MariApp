@@ -1,0 +1,140 @@
+.splash {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.splash.visible {
+    display: flex;
+}
+
+.splash.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-image {
+    width: min(80vw, 340px);
+    height: min(80vw, 340px);
+    border-radius: 24px;
+    background-image: url('fotos/20260801_170405.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+button {
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mensagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+
+.fotoss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mari {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+#coracao {
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    animation: bater 2s infinite;
+}
+
+@keyframes bater {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para a imagem da Mari */
+#fotoMari0,
+#fotoMari1,
+#fotoMari2,
+#fotoMari3,
+#fotoMari4,
+#fotoMari5,
+#fotoMari6,
+#fotoMari7,
+#fotoMari8 {
+    display: none;
+    width: 250px;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+    margin: 0 auto;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Começa totalmente invisível */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina totalmente visível */
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    /* Duração de 1 segundo com efeito suave */
+}
